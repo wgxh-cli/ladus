@@ -1,14 +1,13 @@
 pub mod alias;
 pub mod transform;
 pub mod operations;
+#[cfg(feature = "complex")]
+pub mod complex;
 
 use std::fmt::Debug;
 use std::hash::Hash;
 use std::ops::{Add, Sub, Mul, Div, Index};
 use std::collections::VecDeque;
-pub use transform::*;
-pub use alias::*;
-pub use operations::*;
 
 // First let's start with some basic types.
 
@@ -26,7 +25,7 @@ pub struct Vector<const L: usize, T> {
   els: [T; L],
 }
 #[derive(Debug, Clone)]
-pub struct VecIter<T: VecEntry>(VecDeque<T>);
+pub struct VecIter<T: VecEntry>(pub(crate) VecDeque<T>);
 
 
 

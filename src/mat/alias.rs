@@ -1,4 +1,4 @@
-use super::*;
+use crate::prelude::*;
 
 pub type Mat2x2<T> = Matrix<2, 2, T>;
 pub type Mat2x3<T> = Matrix<2, 3, T>;

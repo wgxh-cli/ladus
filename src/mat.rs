@@ -2,14 +2,11 @@ pub mod alias;
 pub mod transform;
 pub mod operations;
 
-use crate::*;
-use std::ops::{Add, Sub, Mul, Index};
-pub use alias::*;
-pub use transform::*;
-pub use operations::*;
+use crate::prelude::*;
+use std::ops::Index;
 
 #[derive(Debug, Clone, Copy)]
-pub struct Matrix<const M: usize, const N: usize, T: VecEntry>(Vector<M, Vector<N, T>>);
+pub struct Matrix<const M: usize, const N: usize, T: VecEntry>(pub(crate) Vector<M, Vector<N, T>>);
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]
 pub struct RowIdx(usize);
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]

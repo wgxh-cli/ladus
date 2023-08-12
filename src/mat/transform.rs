@@ -1,4 +1,4 @@
-use super::*;
+use crate::prelude::*;
 
 pub trait FromMatrix<const M: usize, const N: usize, T: VecEntry> {
   fn from_matrix(mat: Matrix<M, N, T>) -> Self;

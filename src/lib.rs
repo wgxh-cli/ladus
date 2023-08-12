@@ -2,14 +2,10 @@
 
 pub mod vec;
 pub mod mat;
-
-pub use vec::*;
-pub use mat::*;
+pub mod prelude;
 
 #[cfg(test)]
 mod tests {
-  use crate::*;
-
   #[test]
   fn mat_mul() {
     let mat = [

@@ -1,4 +1,5 @@
-use super::*;
+use crate::prelude::*;
+use std::ops::*;
 
 impl<const M: usize, const N: usize, T: VecEntry> Add for Matrix<M, N, T> {
   type Output = Self;

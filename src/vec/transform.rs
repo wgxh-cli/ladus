@@ -1,4 +1,4 @@
-use super::*;
+use crate::prelude::*;
 
 pub trait FromVector<const L: usize, T> {
   fn from_vec(vector: Vector<L, T>) -> Self;

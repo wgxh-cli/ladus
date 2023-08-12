@@ -1,4 +1,4 @@
-use super::*;
+use crate::prelude::*;
 
 pub type Vec2<T> = Vector<2, T>;
 pub type Vec3<T> = Vector<3, T>;

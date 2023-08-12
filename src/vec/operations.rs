@@ -1,4 +1,5 @@
-use super::*;
+use crate::prelude::*;
+use std::ops::*;
 
 impl<const L: usize, T: VecEntry> Add for Vector<L, T> {
   type Output = Self;
